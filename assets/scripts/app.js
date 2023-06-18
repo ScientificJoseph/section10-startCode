@@ -1,17 +1,31 @@
+class Product{
+    title = 'DEFAULT';
+    imageUrl;
+    description;
+    price;
+
+    constructor(title, image, desc, price) {
+        this.title = title;
+        this.imageUrl = image;
+        this.description = desc;
+        this.price = price 
+    }
+}
+
 const productList = {
     products: [
-        {
-            title: 'A Pillow',
-            imageUrl: 'http://tiny.cc/en48vz',
-            price: 19.99,
-            description: 'A Soft Pillow'
-        },
-        {
-            title: 'A Carpet',
-            imageUrl: 'http://tiny.cc/co48vz',
-            price: 89.99,
-            description: 'A Custom Carpet Just for You'
-        }
+        new Product(
+            'A Pillow', 
+            'http://tiny.cc/en48vz', 
+            'A Soft Pillow', 
+            19.99
+        ),
+        new Product (
+            'A Carpet',
+            'http://tiny.cc/co48vz',
+            'A Custom Carpet Just for You',
+            89.99
+        )
     ],
     render() {
         const renderHook = document.getElementById('app');
