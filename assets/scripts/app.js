@@ -12,6 +12,7 @@ class Product{
     }
 }
 
+
 class ProductItem {
     constructor(product) {
         this.product = product
